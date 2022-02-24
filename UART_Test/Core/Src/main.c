@@ -107,7 +107,6 @@ int main(void)
 	  if(echo_flag)
 	  {
 		HAL_UART_Transmit(&huart2, myRxData, 1, 10);
-		HAL_UART_Transmit(&huart2, (uint8_t*)"\n", 1, 10);
 		HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
 		HAL_UART_Receive_IT(&huart2, myRxData, 1);
 		echo_flag = 0;
